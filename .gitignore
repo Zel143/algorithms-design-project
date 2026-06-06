@@ -18,7 +18,9 @@ Thumbs.db
 *.log
 *.xlsx
 
-
+#references for acm format
+references
+prompt.md
+RESEARCH_GUIDE.md
  
-# Generated PDF files (commit manually if needed)
-*.pdf
+ 
