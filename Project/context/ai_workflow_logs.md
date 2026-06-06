@@ -41,4 +41,9 @@ Use this file to track important workflow actions for the Algorithms and Design 
 - Files: context/ai_workflow.md; context/ai_workflow_logs.md; context/karpathy-rules.md
 - Validation: All three context files reviewed and updated with current project state.
 - Notes: ai_workflow.md now lists active project files and algorithm class. karpathy-rules.md notes the selected topic.
+- Date: 2026-06-06
+- Action: Switched active project topic from 0/1 Knapsack (DP) to Task Scheduling with Deadlines and Profits (Greedy).
+- Files: task scheduling project/proposal.md; task scheduling project/task_scheduling.py; task scheduling project/sample_output.md; task scheduling project/report.md; task scheduling project/README.md
+- Validation: Ran task_scheduling.py -- output confirmed: Selected C, A; Skipped D, B; Total Profit 60.
+- Notes: knapsack project/ kept as reference. Context files and root README updated to reflect the new active topic.
 

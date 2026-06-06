@@ -65,24 +65,26 @@ Use this file as the working rules for the Algorithms and Design Project.
 
 ## Selected Topic (Active)
 
-**Problem:** 0/1 Knapsack Problem Using Dynamic Programming
+**Problem:** Task Scheduling with Deadlines and Profits
 
-**Algorithm Technique:** Dynamic Programming (bottom-up tabulation + backtracking)
+**Algorithm Technique:** Greedy (sort by profit descending, fill latest valid slot)
 
 **Inputs:**
-- List of items, each with id, weight, and profit
-- Knapsack capacity W
+- List of tasks, each with an id, a deadline, and a profit
+- (Implicit) number of time slots = maximum deadline across all tasks
 
 **Outputs:**
-- Selected items
-- Total weight used
-- Total profit
-- DP table (for analysis display)
+- Selected tasks and their assigned time slots
+- Skipped tasks (no valid slot available)
+- Total profit of scheduled tasks
 
 **Complexity:**
-- Time: O(n × W)
-- Space: O(n × W), reducible to O(W) with 1D rolling array
+- Sorting: O(n log n)
+- Slot placement: O(n * d), where d is the maximum deadline
+- Overall: O(n log n + n * d), simplifies to O(n^2) when d is bounded by n
+- Space: O(d) for the slot array
 
-**Project Folder:** `knapsack project/`
+**Project Folder:** `task scheduling project/`
 
-**Status:** Proposal submitted. Code implemented and verified. Report drafted.
+**Status:** Proposal submitted. Code implemented and verified. Report drafted.
+

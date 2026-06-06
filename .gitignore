@@ -17,3 +17,8 @@ Thumbs.db
 # Sensitive or generated files
 *.log
 *.xlsx
+
+
+ 
+# Generated PDF files (commit manually if needed)
+*.pdf

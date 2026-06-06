@@ -4,27 +4,27 @@ This workflow is tailored for the Algorithms and Design Project in this workspac
 
 ## Active Project
 
-**Topic:** 0/1 Knapsack Problem Using Dynamic Programming
-**Folder:** `knapsack project/`
-**Algorithm Class:** Dynamic Programming
+**Topic:** Task Scheduling with Deadlines and Profits
+**Folder:** `task scheduling project/`
+**Algorithm Class:** Greedy
 **Language:** Python
 
 ### Active Project Files
 
 | File | Purpose |
 |------|---------|
-| `knapsack project/proposal.md` | Project proposal (brief discussion, input, outcome) |
-| `knapsack project/knapsack.py` | DP implementation with backtracking and table display |
-| `knapsack project/sample_output.md` | Verified output from running `knapsack.py` |
-| `knapsack project/report.md` | Full written report |
-| `knapsack project/README.md` | Folder index (problem → code → output → report) |
+| `task scheduling project/proposal.md` | Project proposal (brief discussion, input, outcome) |
+| `task scheduling project/task_scheduling.py` | Greedy implementation with trace output |
+| `task scheduling project/sample_output.md` | Verified output from running `task_scheduling.py` |
+| `task scheduling project/report.md` | Full written report with complexity analysis |
+| `task scheduling project/README.md` | Folder index (problem -> code -> output -> report) |
 
-### Reference (Sample)
+### Reference (Sample / Previous Draft)
 
 | File | Purpose |
 |------|---------|
-| `sample project/task_scheduling.py` | Greedy demo (prof's sample) |
-| `sample project/report.md` | Sample report structure to mirror |
+| `sample project/task_scheduling.py` | Prof's original demo (same topic, simpler version) |
+| `knapsack project/` | Previous draft topic (DP), kept for reference |
 
 ---
 
@@ -65,7 +65,7 @@ Each log entry should include:
 
 ## Project Tailoring
 
-- Active topic: **0/1 Knapsack — Dynamic Programming**.
+- Active topic: **Task Scheduling with Deadlines and Profits — Greedy**.
 - Use the handout's rubric as the main quality gate.
 - Favor algorithm clarity and complexity analysis over extra features.
 - Keep reports, code, sample inputs, and recorded presentation requirements visible.

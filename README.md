@@ -1,6 +1,7 @@
 # Algorithms Design Project
 
-Welcome to the **Algorithms and Complexity** project repository. This repository contains both the reference sample project and the active implemented topic on the **0/1 Knapsack Problem** using Dynamic Programming.
+Welcome to the **Algorithms and Complexity** project repository. This repository
+contains the active project implementation and reference materials for the course.
 
 ---
 
@@ -9,41 +10,42 @@ Welcome to the **Algorithms and Complexity** project repository. This repository
 ```
 .
 ├── Project/
-│   ├── knapsack project/       # Main Project Delivery (0/1 Knapsack via DP)
-│   │   ├── README.md           # Sub-project index
-│   │   ├── knapsack.py         # Python implementation with DP table output
-│   │   ├── proposal.md         # Topic proposal description
-│   │   ├── sample_output.md    # Code output results
-│   │   └── report.md           # Full written analysis and complexity report
-│   │
-│   ├── sample project/         # Professor's reference demo (Greedy Scheduling)
+│   ├── task scheduling project/    # Active Project Delivery
 │   │   ├── README.md
+│   │   ├── task_scheduling.py      # Greedy implementation with trace output
+│   │   ├── proposal.md             # Topic proposal with input and outcome
+│   │   ├── sample_output.md        # Verified code output
+│   │   └── report.md               # Full written analysis and complexity report
+│   │
+│   ├── knapsack project/           # Previous draft (DP), kept for reference
+│   │
+│   ├── sample project/             # Professor's reference demo (same topic)
 │   │   ├── task_scheduling.py
 │   │   ├── sample_output.md
 │   │   └── report.md
 │   │
-│   └── context/                # Handouts and workflow instructions
+│   └── context/                    # Handouts and workflow instructions
 ```
 
 ---
 
-## Active Topic: 0/1 Knapsack Project
+## Active Topic: Task Scheduling with Deadlines and Profits
 
-The main design project focuses on solving the **0/1 Knapsack Problem** using **Dynamic Programming** to find the optimal combination of items that maximizes profit under weight constraints.
+The main design project solves the **Task Scheduling with Deadlines and Profits**
+problem using a **Greedy Algorithm**: sort tasks by profit descending, then place
+each in the latest available slot before its deadline to maximize total profit.
 
 ### Deliverables Quick Links
 
-1. **Problem & Proposal:** Check out the [Proposal](Project/knapsack%20project/proposal.md) containing the topic discussion, input matrices, and expected outcomes.
-2. **Implementation Code:** Read [knapsack.py](Project/knapsack%20project/knapsack.py).
-3. **Execution Output:** View the verified [Sample Output](Project/knapsack%20project/sample_output.md) containing the tabulated DP matrix.
-4. **Complexity Analysis Report:** Read the full [Project Report](Project/knapsack%20project/report.md) showing time complexity $O(n \times W)$, space complexity, and comparisons with greedy approaches.
+1. **Proposal:** [proposal.md](Project/task%20scheduling%20project/proposal.md) -- topic discussion, input, and expected outcome.
+2. **Code:** [task_scheduling.py](Project/task%20scheduling%20project/task_scheduling.py) -- greedy implementation with step-by-step trace.
+3. **Output:** [sample_output.md](Project/task%20scheduling%20project/sample_output.md) -- verified schedule and profit result.
+4. **Report:** [report.md](Project/task%20scheduling%20project/report.md) -- full analysis including complexity and greedy correctness argument.
 
 ---
 
 ## Running the Code
 
-Ensure you have Python installed, then run the active project implementation from the repository root:
-
 ```bash
-python "Project/knapsack project/knapsack.py"
+python "Project/task scheduling project/task_scheduling.py"
 ```
