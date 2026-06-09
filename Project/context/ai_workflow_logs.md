@@ -62,3 +62,19 @@ Use this file to track important workflow actions for the Algorithms and Design 
 - Validation: Filled both `ASSIGNEE NEEDED` placeholders with proposal-listed members who did not already have roles: Jon Luigi L. Ariola and Melprin O. Correa.
 - Notes: Jon Luigi L. Ariola is assigned Lead Algorithm Architect. Melprin O. Correa is assigned Complexity & Technical Reporter.
 
+
+- Date: 2026-06-09
+- Action: Added a starter handoff guide so each groupmate can begin their assigned project duty.
+- Files: team_workflow.md; context/ai_workflow_logs.md
+- Validation: Added concrete start tasks, expected outputs, dependencies, and a first team checkpoint aligned with the k-NN proposal.
+- Notes: The guide is intended to unblock parallel work before implementation starts.
+- Date: 2026-06-09
+- Action: Completed Ranzel's starter task for dataset curation and edge-case planning.
+- Files: ranzel_dataset_and_edge_cases.md; team_workflow.md; context/ai_workflow.md; context/ai_workflow_logs.md
+- Validation: Created an 18-point fruit-classification training dataset, 8 boundary-focused test points, edge-case handling table, deterministic tie-breaking rules, and handoff notes for algorithm, testing, and documentation roles.
+- Notes: Dataset uses Weight and Sweetness as 2D features with Lemon, Apple, and Banana classes.
+- Date: 2026-06-09
+- Action: Split ACM-style references into a separate file and added a root `.gitignore`.
+- Files: ranzel_dataset_references.md; ranzel_dataset_and_edge_cases.md; .gitignore; context/ai_workflow_logs.md
+- Validation: Added a dedicated reference file for the k-NN context and a sensible ignore list for editor, log, temporary, and Python artifact files.
+- Notes: The dataset handoff remains original material; the new references file provides academic context only.

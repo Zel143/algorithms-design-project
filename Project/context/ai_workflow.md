@@ -15,6 +15,8 @@ This workflow is tailored for the Algorithms and Design Project in this workspac
 | File | Purpose |
 |------|---------|
 | `Algorithms_and_Complexity_Proposal.md` | Submitted project proposal with brief discussion, inputs, outcomes, and references |
+| `team_workflow.md` | Team role assignment and handoff guide |
+| `ranzel_dataset_and_edge_cases.md` | Initial dataset, boundary test cases, edge cases, and tie-breaking rules |
 
 ### Reference (Previous Drafts)
 
