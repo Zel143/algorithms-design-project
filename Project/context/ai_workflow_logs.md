@@ -46,4 +46,19 @@ Use this file to track important workflow actions for the Algorithms and Design 
 - Files: task scheduling project/proposal.md; task scheduling project/task_scheduling.py; task scheduling project/sample_output.md; task scheduling project/report.md; task scheduling project/README.md
 - Validation: Ran task_scheduling.py -- output confirmed: Selected C, A; Skipped D, B; Total Profit 60.
 - Notes: knapsack project/ kept as reference. Context files and root README updated to reflect the new active topic.
+- Date: 2026-06-09
+- Action: Updated project context after submitting the Algorithms and Complexity proposal for "The Geometry of AI Decisions."
+- Files: Algorithms_and_Complexity_Proposal.md; context/ai_workflow.md; context/karpathy-rules.md; context/current_instructions.md; context/ai_workflow_logs.md
+- Validation: Reviewed submitted proposal content and aligned active project metadata with its topic, inputs, outcomes, references, and follow-up deliverables.
+- Notes: Active project is now the zero-dependency k-NN distance-metric comparison using Euclidean and Manhattan distance. Previous task-scheduling and knapsack work should be treated as reference only.
+- Date: 2026-06-09
+- Action: Logged unrelated pre-existing worktree deletions observed during context update.
+- Files: sample project/README.md; sample project/knapsack project/knapsack.py; sample project/knapsack project/md_to_pdf.py; sample project/knapsack project/proposal.md; sample project/knapsack project/report.md; sample project/knapsack project/sample_output.md; sample project/report.md; sample project/sample_output.md; sample project/task_scheduling.py; task scheduling project/README.md; task scheduling project/presentation_plan.md; task scheduling project/proposal.md; task scheduling project/report.md; task scheduling project/sample_output.md; task scheduling project/task_scheduling.py
+- Validation: Confirmed through `git status --short` that these files were already marked deleted and unrelated to the context-file update.
+- Notes: Deletions were not reverted or modified. They remain separate from the submitted k-NN proposal context update.
+- Date: 2026-06-09
+- Action: Assigned remaining team workflow roles using the unassigned members from the submitted proposal team list.
+- Files: team_workflow.md; context/ai_workflow_logs.md
+- Validation: Filled both `ASSIGNEE NEEDED` placeholders with proposal-listed members who did not already have roles: Jon Luigi L. Ariola and Melprin O. Correa.
+- Notes: Jon Luigi L. Ariola is assigned Lead Algorithm Architect. Melprin O. Correa is assigned Complexity & Technical Reporter.
 

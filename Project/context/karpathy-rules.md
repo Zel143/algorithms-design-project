@@ -65,26 +65,26 @@ Use this file as the working rules for the Algorithms and Design Project.
 
 ## Selected Topic (Active)
 
-**Problem:** Task Scheduling with Deadlines and Profits
+**Problem:** The Geometry of AI Decisions - comparing how Euclidean and Manhattan distance metrics affect k-Nearest Neighbors classifications and decision boundaries.
 
-**Algorithm Technique:** Greedy (sort by profit descending, fill latest valid slot)
+**Algorithm Technique:** k-Nearest Neighbors from scratch using distance-based search/classification.
 
 **Inputs:**
-- List of tasks, each with an id, a deadline, and a profit
-- (Implicit) number of time slots = maximum deadline across all tasks
+- Custom non-linearly separable 2D dataset with labeled points
+- Test coordinates positioned on or near decision boundaries
+- Configurable k value
+- Distance metric toggle: Euclidean or Manhattan
 
 **Outputs:**
-- Selected tasks and their assigned time slots
-- Skipped tasks (no valid slot available)
-- Total profit of scheduled tasks
+- Predicted class for each test point
+- 2D scatter plot showing dataset points, test points, and decision boundaries
+- Comparative analysis of classification changes, boundary sensitivity, error rates, and execution profiles across metrics and k values
 
 **Complexity:**
-- Sorting: O(n log n)
-- Slot placement: O(n * d), where d is the maximum deadline
-- Overall: O(n log n + n * d), simplifies to O(n^2) when d is bounded by n
-- Space: O(d) for the slot array
+- Per query distance computation: O(n), where n is the number of training points
+- Neighbor selection by full sorting: O(n log n); may be optimized later with partial selection
+- Space: O(n) for computed distances and neighbor records
 
-**Project Folder:** `task scheduling project/`
+**Proposal File:** `Algorithms_and_Complexity_Proposal.md`
 
-**Status:** Proposal submitted. Code implemented and verified. Report drafted.
-
+**Status:** Proposal submitted on 2026-06-09. Implementation, sample outputs, report, and recorded presentation remain as follow-up deliverables.

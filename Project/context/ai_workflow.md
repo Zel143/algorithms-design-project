@@ -4,27 +4,25 @@ This workflow is tailored for the Algorithms and Design Project in this workspac
 
 ## Active Project
 
-**Topic:** Task Scheduling with Deadlines and Profits
-**Folder:** `task scheduling project/`
-**Algorithm Class:** Greedy
+**Topic:** The Geometry of AI Decisions
+**Proposal File:** `Algorithms_and_Complexity_Proposal.md`
+**Algorithm Class:** k-Nearest Neighbors (k-NN) classification / searching and distance-based classification
 **Language:** Python
+**Current Status:** Proposal submitted on 2026-06-09.
 
 ### Active Project Files
 
 | File | Purpose |
 |------|---------|
-| `task scheduling project/proposal.md` | Project proposal (brief discussion, input, outcome) |
-| `task scheduling project/task_scheduling.py` | Greedy implementation with trace output |
-| `task scheduling project/sample_output.md` | Verified output from running `task_scheduling.py` |
-| `task scheduling project/report.md` | Full written report with complexity analysis |
-| `task scheduling project/README.md` | Folder index (problem -> code -> output -> report) |
+| `Algorithms_and_Complexity_Proposal.md` | Submitted project proposal with brief discussion, inputs, outcomes, and references |
 
-### Reference (Sample / Previous Draft)
+### Reference (Previous Drafts)
 
 | File | Purpose |
 |------|---------|
-| `sample project/task_scheduling.py` | Prof's original demo (same topic, simpler version) |
-| `knapsack project/` | Previous draft topic (DP), kept for reference |
+| `task scheduling project/` | Previous active topic (Greedy), no longer current |
+| `sample project/` | Earlier sample/reference material, no longer current |
+| `knapsack project/` | Previous draft topic (DP), no longer current |
 
 ---
 
@@ -65,8 +63,12 @@ Each log entry should include:
 
 ## Project Tailoring
 
-- Active topic: **Task Scheduling with Deadlines and Profits — Greedy**.
+- Active topic: **The Geometry of AI Decisions - k-NN distance metric comparison**.
+- Proposal status: **Submitted**.
+- Build the implementation from scratch without Scikit-Learn or similar ML libraries.
+- Compare Euclidean and Manhattan distance behavior across a custom 2D dataset.
+- Include decision-boundary visualization, edge-case handling for ties, and empirical comparison across k values.
 - Use the handout's rubric as the main quality gate.
-- Favor algorithm clarity and complexity analysis over extra features.
+- Favor algorithm clarity, distance-metric correctness, complexity analysis, and reproducible experiments over extra features.
 - Keep reports, code, sample inputs, and recorded presentation requirements visible.
 - Do not introduce unrelated automation or abstractions unless the project needs them.
