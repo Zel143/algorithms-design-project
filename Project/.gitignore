@@ -12,15 +12,27 @@ Thumbs.db
 *.log
 *.tmp
 *.temp
+*.err
+*.out
 
 # Python artifacts
 __pycache__/
 *.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
 .venv/
 venv/
 env/
+.coverage
+htmlcov/
 
-# Build and export artifacts
+# Build and package artifacts
 dist/
 build/
-*.pdf
+site/
+*.egg-info/
+
+# Local environment files
+.env
+.env.*
