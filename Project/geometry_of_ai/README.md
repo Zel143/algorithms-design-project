@@ -11,7 +11,7 @@ This folder contains the initial Python scaffold for the Group 3 Algorithms Proj
 
 ## Teammate Instructions
 
-### Jon Luigi (Algorithm Architect)
+### Jon Luigi 1 (Algorithm Architect)
 1. Complete the `predict` method in `knn_engine.py`.
 2. Ensure you implement the deterministic tie-breaking rules:
    - Vote count first.

@@ -69,12 +69,11 @@ Use deterministic rules so repeated runs always produce the same classification.
 
 1. Count the class votes among the k nearest neighbors.
 2. If one class has the highest vote count, return that class.
-3. If there is a vote tie among multiple classes:
-   - For each tied class, compute the average distance from the query point to its k nearest neighbors.
-   - Select the tied class with the smallest average distance.
-4. If tie persists (rare edge case), use fixed class priority: Apple, Banana, Lemon (final fallback).
+3. If there is a vote tie, choose the tied class with the smaller average distance among its selected neighbors.
+4. If the tie still remains, use fixed class priority: Apple, Banana, Lemon.
+5. If multiple points have the same distance during sorting, order them by class priority, then point ID.
 
-**Rationale:** This rule is insertion-order independent and geometrically sound. Shuffling the training data produces identical predictions. It leverages the distance metrics at the core of our comparison study.
+The fixed priority is only a final fallback. The main decision should still come from neighbor votes and distances.
 
 ## Handoff Notes
 

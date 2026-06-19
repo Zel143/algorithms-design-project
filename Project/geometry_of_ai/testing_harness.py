@@ -31,6 +31,7 @@ def run_experiment(k_value, metric):
     return results
 
 if __name__ == "__main__":
-    # Starter runs for Stephanie to validate implementation
-    run_experiment(k_value=3, metric='euclidean')
-    run_experiment(k_value=3, metric='manhattan')
+    # Runs for Stephanie to validate implementation and compile comparison matrix
+    for k in [1, 3, 5]:
+        run_experiment(k_value=k, metric='euclidean')
+        run_experiment(k_value=k, metric='manhattan')
