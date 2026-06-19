@@ -60,8 +60,8 @@ Use this file to track important workflow actions for the Algorithms and Design 
 - Date: 2026-06-09
 - Action: Assigned remaining team workflow roles using the unassigned members from the submitted proposal team list.
 - Files: team_workflow.md; context/ai_workflow_logs.md
-- Validation: Filled both `ASSIGNEE NEEDED` placeholders with proposal-listed members who did not already have roles: Jon Luigi L. Ariola and Melprin O. Correa.
-- Notes: Jon Luigi L. Ariola is assigned Lead Algorithm Architect. Melprin O. Correa is assigned Complexity & Technical Reporter.
+- Validation: Filled both `ASSIGNEE NEEDED` placeholders with proposal-listed members who did not already have roles: Luigi L. Ariola and Melprin O. Correa.
+- Notes: Luigi L. Ariola is assigned Lead Algorithm Architect. Melprin O. Correa is assigned Complexity & Technical Reporter.
 - Date: 2026-06-09
 - Action: Added a starter handoff guide so each groupmate can begin their assigned project duty.
 - Files: team_workflow.md; context/ai_workflow_logs.md
@@ -81,7 +81,7 @@ Use this file to track important workflow actions for the Algorithms and Design 
 - Action: Created project scaffolding and starter files for the k-NN implementation.
 - Files: geometry_of_ai/data_loader.py; geometry_of_ai/knn_engine.py; geometry_of_ai/testing_harness.py; geometry_of_ai/README.md; team_workflow.md
 - Validation: Verified dataset integrity in data_loader.py and structure of the testing harness.
-- Notes: Scaffolding unblocks Jon (Algorithm), Stephanie (Testing), and Fiona/Melprin (Documentation) to work in parallel. Logic implementation remains as a follow-up for the Lead Architect.
+- Notes: Scaffolding unblocks Luigi (Algorithm), Stephanie (Testing), and Fiona/Melprin (Documentation) to work in parallel. Logic implementation remains as a follow-up for the Lead Architect.
 - Date: 2026-06-19
 - Action: Implemented geometric tie-breaking in knn_engine.py and updated tie-breaking documentation in ranzel_dataset_and_edge_cases.md per CHANGES_TO_IMPLEMENT.md.
 - Files: geometry_of_ai/knn_engine.py; ranzel_dataset_and_edge_cases.md

@@ -3,7 +3,7 @@
 ## PROJECT PROPOSAL: THE GEOMETRY OF AI DECISIONS
 
 **Presented By Group 3 - BM2:**
-- Jon Luigi L. Ariola
+- Luigi L. Ariola
 - Melprin O. Correa
 - Fiona Hailey L. Maraña
 - Stephanie Keith F. Sison

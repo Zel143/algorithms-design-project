@@ -29,7 +29,7 @@ class KNNClassifier:
     def predict(self, test_point):
         """
         Predicts the class of a single test point.
-        TODO (Jon): Implement the full k-NN logic here.
+        TODO (Luigi): Implement the full k-NN logic here.
         1. Calculate distances to all training points.
         2. Sort by distance.
         3. Handle ties in distance using the priority rules.
@@ -42,7 +42,7 @@ class KNNClassifier:
 
     def _tie_break(self, tied_classes, neighbor_details):
         """
-        TODO (Jon): Implement tie-breaking logic.
+        TODO (Luigi): Implement tie-breaking logic.
         1. Average distance among tied classes.
         2. Final fallback to CLASS_PRIORITY.
         """

@@ -77,7 +77,7 @@ The fixed priority is only a final fallback. The main decision should still come
 
 ## Handoff Notes
 
-For Jon:
+For Luigi:
 - Use the tables above as the initial hardcoded dataset while drafting the k-NN algorithm flow.
 - Include input validation for k, weight, and sweetness.
 - Implement sorting so tied distances produce deterministic output.
