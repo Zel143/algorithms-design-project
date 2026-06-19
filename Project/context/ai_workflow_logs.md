@@ -11,6 +11,7 @@ Use this file to track important workflow actions for the Algorithms and Design 
 - Notes:
 
 ## Entries
+
 - Date: 2026-06-01
 - Action: Added a sample project output file for the task scheduling topic in the sample project folder.
 - Files: sample project/sample_output.md
@@ -61,8 +62,6 @@ Use this file to track important workflow actions for the Algorithms and Design 
 - Files: team_workflow.md; context/ai_workflow_logs.md
 - Validation: Filled both `ASSIGNEE NEEDED` placeholders with proposal-listed members who did not already have roles: Jon Luigi L. Ariola and Melprin O. Correa.
 - Notes: Jon Luigi L. Ariola is assigned Lead Algorithm Architect. Melprin O. Correa is assigned Complexity & Technical Reporter.
-
-
 - Date: 2026-06-09
 - Action: Added a starter handoff guide so each groupmate can begin their assigned project duty.
 - Files: team_workflow.md; context/ai_workflow_logs.md
@@ -87,4 +86,4 @@ Use this file to track important workflow actions for the Algorithms and Design 
 - Action: Implemented geometric tie-breaking in knn_engine.py and updated tie-breaking documentation in ranzel_dataset_and_edge_cases.md per CHANGES_TO_IMPLEMENT.md.
 - Files: geometry_of_ai/knn_engine.py; ranzel_dataset_and_edge_cases.md
 - Validation: Ran `git push` — commit 3b2fbed pushed to main. Both files confirmed updated. No syntax errors.
-- Notes: predict() and _tie_break() methods fully implemented. Tie-breaking now selects the tied class with the smallest average distance to its k neighbors (deterministic, insertion-order independent). Fixed class priority (Apple, Banana, Lemon) retained as last-resort fallback only.
+-
