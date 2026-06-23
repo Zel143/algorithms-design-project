@@ -43,3 +43,63 @@ Starter files are available in the `geometry_of_ai/` directory. Use these to beg
 - **Dataset:** `geometry_of_ai/data_loader.py`
 - **Rules & Constraints:** `ranzel_dataset_and_edge_cases.md`
 - **Project Requirements:** `context/karpathy-rules.md`
+
+
+
+
+## log team status
+- **June 19, 2026** Hello 
+
+Everyone
+
+
+
+Nag-push na ako ng initial setup sa repository para pwede na tayong mag-work nang sabay-sabay nang walang nagkakabanggaang files.
+
+
+
+Ito yung status ng code natin ngayon at yung mga susunod nating gagawin:
+
+
+
+1. Iniskedyul ko na yung Code (Clean Slate)
+
+Binalik ko muna sa blankong "TODO" placeholders yung `geometry_of_ai/knn_engine.py`. Tinanggal ko muna yung mga nauna kong sinulat para malinis at walang maging merge conflicts habang gumagawa tayo.
+
+
+
+2. May Testing Suite na Tayo (`geometry_of_ai/test_knn.py`)
+
+Gumawa ako ng automatic tests para i-check kung tama yung magiging code natin (kasama na yung handling sa errors at tie-breaking). Dahil blanko pa yung code, expected na bagsak pa yung 6 out of 7 tests natin ngayon.
+
+@Luigi: Pwede mong i-run yung `python -m unittest geometry_of_ai/test_knn.py` habang nagre-code ka para makita mo kung anong gumagana at anong kulang.
+
+
+
+3. Tool para sa Charts (`geometry_of_ai/main.py`)
+
+Gumawa na rin ako ng script na automatic mag-da-draw ng side-by-side charts para sa Euclidean vs. Manhattan boundaries natin. Kapag gumagana na yung code ni Luigi at pumasa sa tests, i-run lang 'to at automatic nang mase-save yung mga images (`decision_boundaries_k3.png` at `decision_boundaries_k5.png`) sa folder natin.
+
+
+
+4. Next Steps & Handoff (Sino ang blocked at sino ang pwede na magsimula?)
+
+• @Luigi (Hindi blocked): Pa-code nung `predict()` at `_tie_break()` sa `knn_engine.py`. Goal natin is makuha yung 7/7 passing score sa tests natin.
+
+• @Stephanie (Blocked kay Luigi): Kapag tapos na si Luigi, pa-run nung `python geometry_of_ai/testing_harness.py` para makuha natin yung mga numero at accuracy scores para sa table ng report natin.
+
+• @Fiona (Blocked kay Luigi): Pa-run ng `main.py` kapag okay na yung tests ni Luigi para ma-download mo yung mga charts na ilalagay natin sa docs.
+
+• @Melprin (Hindi blocked): Pwede mo nang simulan i-analyze at isulat kung gaano kabilis tumakbo at gaano kalaking memory ang kinakain ng k-NN search at sorting parts natin (Big-O analysis).
+
+• @David (Hindi blocked): Pwede mo nang simulan i-draft yung math side ng report natin—pa-explain kung bakit pabilog yung shape ng boundary kapag Euclidean distance ang gamit, at hugis diamond naman kapag Manhattan distance. By tuesday i'm hoping nakagawa na lahat ganon para formatting na lang ng paper alalalahanin for next week.
+
+
+
+Mag-chat lang kayo dito sa thread natin kung may nagka-error sa inyo o kung may tanong kayo sa pag-run ng mga scripts! Btw yung sa docs pakitignan na rin yung Project draft na subdraft under project and pakidagdagan in research about the topic., ayun lang thanks.
+
+
+
+
+
+eto yung git repository ulit: GitHub - Zel143/algorithms-design-project

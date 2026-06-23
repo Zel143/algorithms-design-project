@@ -9,26 +9,17 @@ def run_experiment(k_value, metric):
     test_points = get_test_points()
     priority = get_priority()
     
-    knn = KNNClassifier(k=k_value, metric=metric, priority=priority)
-    knn.fit(train_data)
+    # TODO: Stephanie - Implement the testing harness here!
+    # 1. Initialize the KNNClassifier with the given k_value and metric
+    # 2. Fit the train_data
+    # 3. Start a timer (time.perf_counter)
+    # 4. Loop through test_points and generate predictions
+    # 5. Stop the timer and print the total execution time
+    # 6. Print the predictions for each test point (T1-T8)
     
-    results = []
+    print("TODO: Stephanie needs to write the prediction loop and execution time logging.")
     
-    start_time = time.perf_counter()
-    for tp in test_points:
-        prediction = knn.predict(tp)
-        results.append({
-            "id": tp['id'],
-            "desc": tp['desc'],
-            "predicted": prediction
-        })
-    end_time = time.perf_counter()
-    
-    for res in results:
-        print(f"[{res['id']}] {res['desc']:35} -> Result: {res['predicted']}")
-        
-    print(f"Execution Time: {(end_time - start_time)*1000:.4f} ms")
-    return results
+    return []
 
 if __name__ == "__main__":
     # Runs for Stephanie to validate implementation and compile comparison matrix
