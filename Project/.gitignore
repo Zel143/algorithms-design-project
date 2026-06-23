@@ -1,38 +1,42 @@
-# OS files
+# OS & Environment Files
 .DS_Store
 Thumbs.db
+.env
+.env.*
 
-# Editor and IDE settings
+# Editor & IDE Settings
 .vscode/
 .idea/
 *.swp
 *.swo
 
-# Logs and temporary files
+# Python & Virtual Environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Build & Package Artifacts
+dist/
+build/
+site/
+*.egg-info/
+
+# Logs & Temporary Files
 *.log
 *.tmp
 *.temp
 *.err
 *.out
 
-# Python artifacts
-__pycache__/
-*.py[cod]
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-.venv/
-venv/
-env/
-.coverage
-htmlcov/
-
-# Build and package artifacts
-dist/
-build/
-site/
-*.egg-info/
-
-# Local environment files
-.env
-.env.*
+# Data Science & Project Specific
+.ipynb_checkpoints/
+# Add data directories here if you decide to ignore large raw datasets:
+# data/raw/
+# data/temp/
