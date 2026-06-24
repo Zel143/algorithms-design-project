@@ -4,6 +4,9 @@ Thumbs.db
 .env
 .env.*
 
+*.pdf
+*.docx
+
 # Editor & IDE Settings
 .vscode/
 .idea/

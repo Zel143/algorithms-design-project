@@ -21,21 +21,69 @@ def plot_boundaries(k_value):
     test_points = get_test_points()
     priority = get_priority()
     
-    # TODO: Fiona - Implement Matplotlib logic here!
-    # 1. Setup Classifiers (Euclidean and Manhattan)
-    # 2. Create Grid for Decision Boundary (e.g., using np.meshgrid)
-    # 3. Compute predictions on the grid
-    # 4. Define Colormaps mapping to the priority classes
-    # 5. Plot the decision boundaries using pcolormesh
-    # 6. Scatter plot the training data and the test points
-    # 7. Save the image as decision_boundaries_k{k_value}.png
+    knn_euc = KNNClassifier(k=k_value, metric='euclidean', priority=priority)
+    knn_euc.fit(train_data)
     
-    print(f"TODO: Fiona needs to add the plotting logic to save decision_boundaries_k{k_value}.png")
+    knn_man = KNNClassifier(k=k_value, metric='manhattan', priority=priority)
+    knn_man.fit(train_data)
+    
+    # Map classes to integers
+    class_map = {'Lemon': 0, 'Apple': 1, 'Banana': 2}
+    colors = ['yellow', 'red', 'green']
+    cmap_light = ListedColormap(['#FFFF99', '#FF9999', '#99FF99'])
+    
+    # Grid
+    x_min, x_max = 60, 220
+    y_min, y_max = 1, 10.1
+    xx, yy = np.meshgrid(np.arange(x_min, x_max, 2), np.arange(y_min, y_max, 0.2))
+    
+    grid_points = [{'weight': x, 'sweetness': y} for x, y in zip(xx.ravel(), yy.ravel())]
+    
+    Z_euc = np.array([class_map[knn_euc.predict(p)] for p in grid_points])
+    Z_euc = Z_euc.reshape(xx.shape)
+    
+    Z_man = np.array([class_map[knn_man.predict(p)] for p in grid_points])
+    Z_man = Z_man.reshape(xx.shape)
+    
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(16, 6))
+    
+    ax1.pcolormesh(xx, yy, Z_euc, cmap=cmap_light, shading='auto')
+    ax1.set_title(f'Euclidean Distance Decision Boundary (k={k_value})')
+    
+    ax2.pcolormesh(xx, yy, Z_man, cmap=cmap_light, shading='auto')
+    ax2.set_title(f'Manhattan Distance Decision Boundary (k={k_value})')
+    
+    for ax in (ax1, ax2):
+        for p in train_data:
+            ax.scatter(p['weight'], p['sweetness'], c=colors[class_map[p['class']]], edgecolors='k', marker='o', s=50)
+        for p in test_points:
+            ax.scatter(p['weight'], p['sweetness'], c='white', edgecolors='k', marker='^', s=100)
+        ax.set_xlabel('Weight (g)')
+        ax.set_ylabel('Sweetness (1-10)')
+        
+    plt.savefig(f'decision_boundaries_k{k_value}.png')
+    print(f"Saved plot to decision_boundaries_k{k_value}.png")
 
 def run_predictions_printout(k_value):
-    # TODO: Fiona - Call the classifiers and print out a comparison table
-    # so we can clearly see the predictions for both Euclidean and Manhattan.
-    print(f"TODO: Fiona needs to print the prediction comparison table for k={k_value}")
+    train_data = get_training_data()
+    test_points = get_test_points()
+    priority = get_priority()
+
+    knn_euc = KNNClassifier(k=k_value, metric='euclidean', priority=priority)
+    knn_euc.fit(train_data)
+    
+    knn_man = KNNClassifier(k=k_value, metric='manhattan', priority=priority)
+    knn_man.fit(train_data)
+    
+    print(f"\nPrediction Comparison Table for k={k_value}")
+    print(f"{'Test ID':<10} | {'Euclidean':<15} | {'Manhattan':<15} | {'Match?':<10}")
+    print("-" * 55)
+    for p in test_points:
+        pred_euc = knn_euc.predict(p)
+        pred_man = knn_man.predict(p)
+        match = "Yes" if pred_euc == pred_man else "No"
+        print(f"{p['id']:<10} | {pred_euc:<15} | {pred_man:<15} | {match:<10}")
+    print("\n")
 
 if __name__ == "__main__":
     k_val = 3
