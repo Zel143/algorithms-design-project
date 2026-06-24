@@ -4,47 +4,41 @@ Thumbs.db
 .env
 .env.*
 
-*.pdf
-*.docx
+# Ignore everything by default to ensure only geometry_of_ai is visible/tracked
+*
 
-# Editor & IDE Settings
+# Allow directories so git can traverse into them
+!*/
+
+# Do not ignore .gitignore itself
+!.gitignore
+
+# Do not ignore geometry_of_ai and its contents
+!geometry_of_ai/
+!geometry_of_ai/**
+!ranzel_dataset_and_edge_cases.md
+!decision_boundaries_k3.png
+
+
+
+# Ignore temporary, cache, and IDE files inside geometry_of_ai
+**/__pycache__/
+**/*.py[cod]
+**/.venv/
+**/venv/
+**/env/
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/.coverage
+**/htmlcov/
+**/*.log
+**/*.tmp
+**/*.temp
+**/*.err
+**/*.out
+**/.ipynb_checkpoints/
 .vscode/
 .idea/
 *.swp
 *.swo
-
-# Python & Virtual Environments
-__pycache__/
-*.py[cod]
-.venv/
-venv/
-env/
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-.coverage
-htmlcov/
-
-# Build & Package Artifacts
-dist/
-build/
-site/
-*.egg-info/
-
-# Logs & Temporary Files
-*.log
-*.tmp
-*.temp
-*.err
-*.out
-
-# Data Science & Project Specific
-.ipynb_checkpoints/
-# Add data directories here if you decide to ignore large raw datasets:
-# data/raw/
-# data/temp/
-
-# Project-Specific Ignored Files
-ranzel_dataset_references.md
-team_workflow.md
-Algorithms_and_Complexity_Proposal.md
