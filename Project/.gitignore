@@ -16,7 +16,7 @@ Thumbs.db
 # Do not ignore geometry_of_ai and its contents
 !geometry_of_ai/
 !geometry_of_ai/**
-!ranzel_dataset_and_edge_cases.md
+!dataset_and_edge_cases.md
 !decision_boundaries_k3.png
 
 
