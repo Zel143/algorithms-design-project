@@ -8,7 +8,7 @@ This workflow is tailored for the Algorithms and Design Project in this workspac
 **Proposal File:** `Algorithms_and_Complexity_Proposal.md`
 **Algorithm Class:** k-Nearest Neighbors (k-NN) classification / searching and distance-based classification
 **Language:** Python
-**Current Status:** Proposal submitted on 2026-06-09.
+**Current Status:** Implementation complete, passing tests. Generating report (as of 2026-06-23).
 
 ### Active Project Files
 
@@ -17,6 +17,12 @@ This workflow is tailored for the Algorithms and Design Project in this workspac
 | `Algorithms_and_Complexity_Proposal.md` | Submitted project proposal with brief discussion, inputs, outcomes, and references |
 | `team_workflow.md` | Team role assignment and handoff guide |
 | `ranzel_dataset_and_edge_cases.md` | Initial dataset, boundary test cases, edge cases, and tie-breaking rules |
+| `geometry_of_ai/knn_engine.py` | Core k-NN algorithm implementation (Euclidean/Manhattan metrics, tie-breaking) |
+| `geometry_of_ai/data_loader.py` | Fruit classification dataset and boundaries |
+| `geometry_of_ai/main.py` | Generates decision boundary visualization charts |
+| `geometry_of_ai/test_knn.py` | Automated testing suite |
+| `geometry_of_ai/testing_harness.py` | Harness to run test points for report tables |
+| `geometry_of_ai/README.md` | Technical documentation and methodology |
 
 ### Reference (Previous Drafts)
 

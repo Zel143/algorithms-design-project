@@ -1,9 +1,7 @@
-# Ranzel Starter Output: Dataset and Edge Cases
+## Starter Output: Dataset and Edge Cases
 
 Project: The Geometry of AI Decisions  
-Role: Data Curator & Edge-Case Manager  
-Assignee: Ranzel Jude M. Virtucio
-
+ 
 ## Dataset Theme
 
 The project will use a custom 2D fruit-classification dataset.
@@ -75,22 +73,3 @@ Use deterministic rules so repeated runs always produce the same classification.
 
 The fixed priority is only a final fallback. The main decision should still come from neighbor votes and distances.
 
-## Handoff Notes
-
-For Luigi:
-- Use the tables above as the initial hardcoded dataset while drafting the k-NN algorithm flow.
-- Include input validation for k, weight, and sweetness.
-- Implement sorting so tied distances produce deterministic output.
-
-For Stephanie:
-- Start the testing matrix with k = 1, k = 3, and k = 5.
-- Run each test point once with Euclidean distance and once with Manhattan distance.
-- Mark T4, T5, T6, T7, and T8 as boundary-sensitive cases.
-
-For Fiona:
-- Include the dataset table and edge-case table in the report appendix or methodology section.
-- Use the dataset theme to explain the scatter plot axes clearly.
-
-## References
-
-See [ranzel_dataset_references.md](ranzel_dataset_references.md) for ACM-style source citations.

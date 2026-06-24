@@ -43,3 +43,8 @@ site/
 # Add data directories here if you decide to ignore large raw datasets:
 # data/raw/
 # data/temp/
+
+# Project-Specific Ignored Files
+ranzel_dataset_references.md
+team_workflow.md
+Algorithms_and_Complexity_Proposal.md
