@@ -16,9 +16,16 @@ def manhattan_distance(p1, p2):
 
 class KNNClassifier:
     def __init__(self, k=3, metric='euclidean', priority=None):
+        metric_functions = {
+            'euclidean': euclidean_distance,
+            'manhattan': manhattan_distance,
+        }
+        if metric not in metric_functions:
+            raise ValueError(f"unsupported metric '{metric}'. Use 'euclidean' or 'manhattan'.")
+
         self.k = k
         self.metric_name = metric
-        self.metric_fn = euclidean_distance if metric == 'euclidean' else manhattan_distance
+        self.metric_fn = metric_functions[metric]
         self.priority = priority or ["Apple", "Banana", "Lemon"]
         self.train_data = []
 

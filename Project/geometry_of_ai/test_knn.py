@@ -23,6 +23,10 @@ class TestKNNClassifier(unittest.TestCase):
         # Manhattan: |4| + |3| = 7.0
         self.assertAlmostEqual(manhattan_distance(p1, p2), 7.0)
 
+    def test_invalid_metric(self):
+        with self.assertRaises(ValueError):
+            KNNClassifier(k=3, metric='chebyshev', priority=self.priority)
+
     def test_invalid_k(self):
         # Test negative, zero, and non-integer k
         for bad_k in [0, -3, 2.5, "three"]:
