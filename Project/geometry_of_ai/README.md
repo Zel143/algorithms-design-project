@@ -51,3 +51,7 @@ Our zero-dependency k-Nearest Neighbors implementation uses a structured tie-bre
 4. Tie-breaking rule: if two or more classes tie, pick the one with the lowest *average distance* among its neighbors. If they still tie, use the hardcoded priority (`Apple > Banana > Lemon`).
 
 We plot the decision boundaries for both Euclidean (circular contours) and Manhattan (diamond contours) to visually assess how the distance metric influences misclassifications on our test points.
+
+
+
+### Stephanie (Test Result Analysis)
