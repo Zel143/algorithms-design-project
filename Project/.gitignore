@@ -1,44 +1,34 @@
-# OS & Environment Files
-.DS_Store
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Generated outputs (re-created by main.py)
+decision_boundaries_*.png
+
+# AI workflow scratch files
+prompt.md
+quality_note.md
+word_reformat.md
+
+# Project meta files (not submission deliverables)
+ranzel_dataset_references.md
+team_workflow.md
+Algorithms_and_Complexity_Proposal.md
+dataset_and_edge_cases.md
+
+# All PDFs and Word docs (shared via submission link, not tracked in source repo)
+*.pdf
+*.docx
+
+# Project folders that are not source code
+context/
+Project announcement/
+
+# OS artifacts
 Thumbs.db
-.env
-.env.*
+.DS_Store
 
-# Ignore everything by default to ensure only geometry_of_ai is visible/tracked
-*
-
-# Allow directories so git can traverse into them
-!*/
-
-# Do not ignore .gitignore itself
-!.gitignore
-
-# Do not ignore geometry_of_ai and its contents
-!geometry_of_ai/
-!geometry_of_ai/**
-!dataset_and_edge_cases.md
-!decision_boundaries_k3.png
-
-
-
-# Ignore temporary, cache, and IDE files inside geometry_of_ai
-**/__pycache__/
-**/*.py[cod]
-**/.venv/
-**/venv/
-**/env/
-**/.pytest_cache/
-**/.mypy_cache/
-**/.ruff_cache/
-**/.coverage
-**/htmlcov/
-**/*.log
-**/*.tmp
-**/*.temp
-**/*.err
-**/*.out
-**/.ipynb_checkpoints/
+# Editor
 .vscode/
 .idea/
-*.swp
-*.swo
