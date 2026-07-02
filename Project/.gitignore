@@ -4,7 +4,6 @@ __pycache__/
 *.pyo
 
 # Generated outputs (re-created by main.py)
-decision_boundaries_*.png
 
 # AI workflow scratch files
 prompt.md
