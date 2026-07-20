@@ -15,7 +15,7 @@ def manhattan_distance(p1, p2):
     return abs(p1['weight'] - p2['weight']) + abs(p1['sweetness'] - p2['sweetness'])
 
 class KNNClassifier:
-    def __init__(self, k=3, metric='euclidean', priority=None):
+    def __init__(self, k=3, metric='euclidean', priority=None, normalize=False):
         metric_functions = {
             'euclidean': euclidean_distance,
             'manhattan': manhattan_distance,
@@ -27,11 +27,38 @@ class KNNClassifier:
         self.metric_name = metric
         self.metric_fn = metric_functions[metric]
         self.priority = priority or ["Apple", "Banana", "Lemon"]
+        self.normalize = normalize
         self.train_data = []
+        self._feature_min = None
+        self._feature_max = None
 
     def fit(self, data):
-        """Load training data into the classifier."""
-        self.train_data = data
+        """Load training data into the classifier. If normalize=True, fits
+        min-max scaling on the training features and stores it for use on
+        both training and query points, so distance is computed on a
+        comparable 0-1 scale for weight and sweetness."""
+        if self.normalize:
+            self._feature_min = {
+                'weight': min(p['weight'] for p in data),
+                'sweetness': min(p['sweetness'] for p in data),
+            }
+            self._feature_max = {
+                'weight': max(p['weight'] for p in data),
+                'sweetness': max(p['sweetness'] for p in data),
+            }
+            self.train_data = [self._scale_point(p) for p in data]
+        else:
+            self.train_data = data
+
+    def _scale_point(self, point):
+        """Min-max scale weight/sweetness into [0, 1] using training-set bounds,
+        preserving any other keys (id, class, desc) unchanged."""
+        scaled = dict(point)
+        for feature in ('weight', 'sweetness'):
+            lo, hi = self._feature_min[feature], self._feature_max[feature]
+            span = hi - lo
+            scaled[feature] = (point[feature] - lo) / span if span > 0 else 0.0
+        return scaled
 
     def predict(self, test_point):
         """
@@ -53,10 +80,13 @@ class KNNClassifier:
         if test_point['sweetness'] < 1 or test_point['sweetness'] > 10:
             raise ValueError("sweetness must be between 1 and 10")
 
+        # --- Scale query point to match training feature space, if enabled ---
+        query_point = self._scale_point(test_point) if self.normalize else test_point
+
         # --- Compute distances and sort ---
         distances = []
         for point in self.train_data:
-            dist = self.metric_fn(test_point, point)
+            dist = self.metric_fn(query_point, point)
             distances.append((dist, point))
         distances.sort(key=lambda x: x[0])
 

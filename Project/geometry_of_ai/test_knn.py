@@ -117,5 +117,35 @@ class TestKNNClassifier(unittest.TestCase):
         result_lemon_first = knn_lemon_first.predict({"weight": 15, "sweetness": 2.0})
         self.assertEqual(result_lemon_first, "Lemon")
 
+    def test_normalize_changes_neighbor_geometry(self):
+        # Raw weight (range ~110g) numerically dwarfs raw sweetness (range
+        # ~6.9), so a small weight gap outweighs a near-perfect sweetness
+        # match. Min-max scaling puts both features on [0, 1], letting the
+        # close sweetness match win instead -- flipping the prediction.
+        train_set = [
+            {"id": "L1", "weight": 80,  "sweetness": 2.0, "class": "Lemon"},
+            {"id": "B1", "weight": 190, "sweetness": 8.9, "class": "Banana"},
+        ]
+        query = {"weight": 85, "sweetness": 8.8}
+
+        knn_raw = KNNClassifier(k=1, metric='euclidean', priority=self.priority, normalize=False)
+        knn_raw.fit(train_set)
+        # Raw: L1 is closer (dist~8.4) than B1 (dist~105) despite the huge sweetness gap.
+        self.assertEqual(knn_raw.predict(query), "Lemon")
+
+        knn_norm = KNNClassifier(k=1, metric='euclidean', priority=self.priority, normalize=True)
+        knn_norm.fit(train_set)
+        # Scaled: B1's near-exact sweetness match now outweighs L1's small weight edge.
+        self.assertEqual(knn_norm.predict(query), "Banana")
+
+    def test_normalize_scales_test_point_with_training_bounds(self):
+        knn = KNNClassifier(k=1, metric='euclidean', priority=self.priority, normalize=True)
+        knn.fit(self.toy_data)
+        # Exact match to a training point should still resolve as nearest
+        # neighbor (distance 0) after both are scaled identically.
+        result = knn.predict({"weight": 130, "sweetness": 6.0})
+        self.assertEqual(result, "Apple")
+
+
 if __name__ == "__main__":
     unittest.main()
